@@ -3,7 +3,7 @@ package Assignment.Polymorphism.exam3;
 public class Coffee extends Beverage {
 
   static int amount;
-  public String name;
+  String name;
 
   public Coffee() {
   }
@@ -14,15 +14,18 @@ public class Coffee extends Beverage {
   }
 
   @Override
-  public void calcPrice(String name) {
-    switch (name) {
-      case "Americano" -> price = 1500;
-      case "CafeLatte" -> price = 2500;
-      case "Cappuccino" -> price = 3000;
-      default -> {
-        return;
-      }
+  public void calcPrice() {
+    if (name.equals("Americano")) {
+      price = 1500;
+      amount++;
+    } else if (name.equals("CafeLatte")) {
+      price = 2500;
+      amount++;
+    } else if (name.equals("Cappuccino")) {
+      price = 3000;
+      amount++;
     }
+
   }
 
   @Override

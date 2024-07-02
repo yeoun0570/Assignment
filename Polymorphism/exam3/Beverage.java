@@ -9,9 +9,10 @@ public abstract class Beverage {
   }
 
   public Beverage(String name) {
+    this.name = name;
   }
 
-  abstract public void calcPrice(String name);
+  abstract public void calcPrice();
 
   public void print() {
   }

@@ -3,26 +3,26 @@ package Assignment.Polymorphism.exam3;
 public class Tea extends Beverage {
 
   static int amount;
-  public String name;
-  int price;
+  String name;
 
   public Tea() {
   }
 
   public Tea(String name) {
-    super(name);
     this.name = name;
   }
 
   @Override
-  public void calcPrice(String name) {
-    switch (name) {
-      case "lemonTea" -> price = 1500;
-      case "redginsengTea" -> price = 2500;
-      case "ginsengTea" -> price = 2000;
-      default -> {
-        return;
-      }
+  public void calcPrice() {
+    if (name.equals("lemonTea")) {
+      price = 1500;
+      amount++;
+    } else if (name.equals("redginsengTea")) {
+      price = 2500;
+      amount++;
+    } else if (name.equals("ginsengTea")) {
+      price = 2000;
+      amount++;
     }
   }
 
@@ -36,3 +36,5 @@ public class Tea extends Beverage {
     this.name = name;
   }
 }
+
+
