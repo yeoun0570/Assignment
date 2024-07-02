@@ -1,4 +1,4 @@
-package Assignment.Inheritance;
+package Assignment.Inheritance.date240627;
 
 public class Student {
 
