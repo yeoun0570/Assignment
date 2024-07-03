@@ -1,7 +1,5 @@
 package Assignment.Interface.exam2;
 
-import java.util.Arrays;
-
 public class FactoryExample {
 
   public static void main(String[] args) {
@@ -36,11 +34,17 @@ public class FactoryExample {
     System.out.println(
         "* " + mainFactory.getFactoryName() + " 공장의 하루 생산량과 파트너 공장 협력 시 추가 생산량은 다음과 같다.");
     // TODO
+    String str1 = "Car";
     System.out.println("1. 하루 생산량 = " + mainFactory.makeProducts(mainFactorySkill));
-    System.out.println(
-        "2. 파트너 공장 [" + mainFactory.getFactoryName() + "] 협력 시 추가 생산량 = "
-            + partner.workTogether(
-            partner));
+
+    if (str1.substring(1, 3).equals(mainFactory.getFactoryName().substring(1, 3))) {
+      System.out.println(
+          "2. 파트너 공장 [" + ((CarFactory) partner).getFactoryName() + "] 협력 시 추가 생산량 = "
+              + partner.workTogether(partner));
+    } else {
+      System.out.println("2. 파트너 공장 [" + ((TVFactory) partner).getFactoryName() + "] 협력 시 추가 생산량 = "
+          + partner.workTogether(partner));
+    }
     System.out.println("--------------------------------------------------------------");
   }
 
